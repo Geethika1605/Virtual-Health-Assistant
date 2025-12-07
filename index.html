@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Health Assistant — Login / Signup</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="brand">
+      <h1>Health Assistant</h1>
+      <p>Your virtual health companion</p>
+    </header>
+
+    <section class="card" id="auth-card">
+      <div class="toggle">
+        <button id="show-login" class="active">Login</button>
+        <button id="show-signup">Sign up</button>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <form id="login-form" class="form" autocomplete="off">
+        <h2>Welcome back</h2>
+        <label>
+          Email
+          <input id="login-email" type="email" required />
+        </label>
+        <label>
+          Password
+          <input id="login-password" type="password" minlength="6" required />
+        </label>
+        <div class="actions">
+          <button type="submit" class="btn">Login</button>
+        </div>
+        <p class="msg" id="login-msg"></p>
+      </form>
+
+      <!-- SIGNUP FORM -->
+      <form id="signup-form" class="form hidden" autocomplete="off">
+        <h2>Create account</h2>
+
+        <label>
+          Full name
+          <input id="signup-name" type="text" required />
+        </label>
+
+        <label>
+          Email
+          <input id="signup-email" type="email" required />
+        </label>
+
+        <label>
+          Password
+          <input id="signup-password" type="password" minlength="6" required />
+        </label>
+
+        <label>
+          Confirm password
+          <input id="signup-password-confirm" type="password" minlength="6" required />
+        </label>
+
+        <div class="actions">
+          <button type="submit" class="btn">Sign up</button>
+        </div>
+        <p class="msg" id="signup-msg"></p>
+      </form>
+    </section>
+
+    <footer class="note">
+      <small>Prototype only — integrates later with your Virtual Health Assistant API. Source context: project brief uploaded. :contentReference[oaicite:1]{index=1}</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
